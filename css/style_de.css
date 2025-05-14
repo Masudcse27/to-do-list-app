@@ -1,0 +1,24 @@
+.btn,
+.btn_delete {
+    border: none;
+    border-radius: 12px;
+    background: rgb(28, 154, 228);
+    padding: 5px 10px;
+    color: white;
+    box-shadow: none;
+    text-decoration: none;
+    display: inline-block;
+    box-sizing: border-box;
+    white-space: nowrap;
+}
+
+.btn_delete {
+    background: rgb(244, 26, 26);
+}
+a{
+    text-decoration: none;
+}
+.alert{
+    font-size: small;
+    color: red;
+}
