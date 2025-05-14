@@ -6,7 +6,6 @@ if(empty($id)){
     header("Location:index.php");
     exit;
 }
-echo $id;
 $sql = "SELECT task_name, task_time FROM to_do_list WHERE id=$id";
 
 $task = $conn->query($sql)->fetch_object();

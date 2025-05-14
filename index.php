@@ -59,7 +59,7 @@ unset($_SESSION['errors'],$_SESSION['old']);
                 <tr>
                     <td><?php echo $task->task_name ?></td>
                     <td><?php echo $task->task_time ?></td>
-                    <td> <a href="edit_form.php?id=<?php echo $task->id; ?>" class="btn">edit</a> <a href="#" class="btn_delete">delete</a></td>
+                    <td> <a href="edit_form.php?id=<?php echo $task->id; ?>" class="btn">edit</a> <a href="delete_task.php?id=<?php echo $task->id; ?>" class="btn_delete">delete</a></td>
                 </tr>
                 <?php endwhile; endif; ?>
             </table>
