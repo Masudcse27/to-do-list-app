@@ -3,9 +3,10 @@ session_start();
 include('db_connection.php');
 $id = trim($_GET['id']);
 if(empty($id)){
-    header("location:index.php");
+    header("Location:index.php");
     exit;
 }
+echo $id;
 $sql = "SELECT task_name, task_time FROM to_do_list WHERE id=$id";
 
 $task = $conn->query($sql)->fetch_object();
@@ -26,11 +27,12 @@ $conn->close()
 </head>
 <body>
     <div class="container">
-        <form action="create_task.php" method="post">
+        <form action="update_task.php" method="post">
             <h1>Edit Task</h1>
             <?php if(isset($_SESSION['error'])): ?>
                 <p class="alert"><?php echo $_SESSION['error']; unset($_SESSION['error']) ?></p>
             <?php endif; ?>
+            <input type="hidden" name="id" value="<?php echo htmlspecialchars($id);?>">
             <div>
                 <label for="">Task Name</label><br>
                 <?php if($task_name_error!=''): ?>

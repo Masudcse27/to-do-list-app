@@ -1,7 +1,7 @@
 <?php 
 session_start();
 include('db_connection.php');
-$sql = "SELECT id, task_name, task_time FROM to_do_list";
+$sql = "SELECT id, task_name, task_time FROM to_do_list ORDER BY id ASC";
 $task_list = $conn->query($sql);
 $conn->close();
 $task_name = $_SESSION['old']['task_name']??'';
